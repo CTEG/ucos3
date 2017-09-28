@@ -1,7 +1,8 @@
-
+.idea/
 .vscode
 tags
-build/
+cmake-build/
+cmake-build-debug/
 
 # Object files
 *.o

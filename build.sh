@@ -1,16 +1,18 @@
 #!/bin/sh
 
-if [ -d build ]
+BUILDDIR="cmake-build"
+
+if [ -d ${BUILDDIR} ]
 then
     echo "start building"
 else
     echo "mkdir output dir"
-    mkdir build
+    mkdir ${BUILDDIR}
     echo "start building"
 fi
 
-rm -rf ./build/*
-cd build
+rm -rf ./${BUILDDIR}/*
+cd ${BUILDDIR}
 
 cmake .. #-DCMAKE_TOOLCHAIN_FILE=../toolchain.cmake ..
 make VERBOSE=0
